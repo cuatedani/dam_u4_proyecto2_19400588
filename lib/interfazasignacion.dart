@@ -74,7 +74,13 @@ class _InterfazAsignacionState extends State<InterfazAsignacion> {
                                     listaAsignaciones[indice].docente;
                                 materiaselect =
                                     listaAsignaciones[indice].materia;
-                                horaselect = TimeOfDay(hour: int.parse(listaAsignaciones[indice].horario.split(':')[0]), minute: int.parse(listaAsignaciones[indice].horario.split(':')[1]));
+                                horaselect = TimeOfDay(
+                                    hour: int.parse(listaAsignaciones[indice]
+                                        .horario
+                                        .split(':')[0]),
+                                    minute: int.parse(listaAsignaciones[indice]
+                                        .horario
+                                        .split(':')[1]));
                                 datohora = listaAsignaciones[indice].horario;
                                 edificioselect =
                                     listaAsignaciones[indice].edificio;

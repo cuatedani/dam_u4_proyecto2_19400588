@@ -29,10 +29,16 @@ class Asignacion {
     };
   }
 
-  String getAsistencias(){
+  String getAsistencias() {
     String cadenaasistencias = "";
     asistencia?.forEach((asi) {
-      cadenaasistencias += "  *  FECHA: " + asi.getFecha() + " HORA:" + asi.getHora() + "   REVISOR: " +asi.revisor + "\n";
+      cadenaasistencias += "  *  FECHA: " +
+          asi.getFecha() +
+          " HORA:" +
+          asi.getHora() +
+          "   REVISOR: " +
+          asi.revisor +
+          "\n";
     });
     return cadenaasistencias;
   }
@@ -56,13 +62,15 @@ class Asistencia {
 
   String getFecha() {
     DateTime dateTime = fechahora.toDate();
-    String fecha = '${dateTime.year}-${dateTime.month.toString().padLeft(2, '0')}-${dateTime.day.toString().padLeft(2, '0')}';
+    String fecha =
+        '${dateTime.year}-${dateTime.month.toString().padLeft(2, '0')}-${dateTime.day.toString().padLeft(2, '0')}';
     return fecha;
   }
 
   String getHora() {
     DateTime dateTime = fechahora.toDate();
-    String hora = '${dateTime.hour.toString().padLeft(2, '0')}:${dateTime.minute.toString().padLeft(2, '0')}';
+    String hora =
+        '${dateTime.hour.toString().padLeft(2, '0')}:${dateTime.minute.toString().padLeft(2, '0')}';
     return hora;
   }
 }

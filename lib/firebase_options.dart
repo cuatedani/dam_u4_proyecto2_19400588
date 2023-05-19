@@ -69,7 +69,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '536458351317',
     projectId: 'dam-u4-proyecto2-19400588',
     storageBucket: 'dam-u4-proyecto2-19400588.appspot.com',
-    iosClientId: '536458351317-eg1tmq2k3eth9hqnqquvvi1oejst3u9g.apps.googleusercontent.com',
+    iosClientId:
+        '536458351317-eg1tmq2k3eth9hqnqquvvi1oejst3u9g.apps.googleusercontent.com',
     iosBundleId: 'mx.edu.ittepic.damU4Proyecto219400588',
   );
 }

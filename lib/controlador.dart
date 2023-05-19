@@ -193,9 +193,7 @@ class FDB {
         asistencia: listaAsistencias,
       );
 
-      if (!listaAsistencias.isEmpty) {
-        listaAsignaciones.add(datoAsignacion);
-      }
+      listaAsignaciones.add(datoAsignacion);
     });
 
     return listaAsignaciones;
@@ -209,7 +207,7 @@ class FDB {
 
     await Future.forEach(querySnapshot.docs, (documento) async {
       QuerySnapshot<Map<String, dynamic>> asistenciaSnapshot =
-      await documento.reference.collection('asistencia').get();
+          await documento.reference.collection('asistencia').get();
       List<Asistencia> listaAsistencias = [];
 
       await Future.forEach(asistenciaSnapshot.docs, (asistenciaDoc) {
@@ -218,6 +216,9 @@ class FDB {
           revisor: asistenciaDoc['revisor'],
         );
         DateTime fechahora = asistencia.fechahora.toDate();
+        print(fechahora);
+        print(fecha1);
+        print(fecha2);
         if (fechahora.isAfter(fecha1) && fechahora.isBefore(fecha2)) {
           listaAsistencias.add(asistencia);
         }
@@ -233,7 +234,7 @@ class FDB {
         asistencia: listaAsistencias,
       );
 
-      if (!listaAsistencias.isEmpty && datoAsignacion.edificio == edificio) {
+      if (datoAsignacion.edificio == edificio) {
         listaAsignaciones.add(datoAsignacion);
       }
     });

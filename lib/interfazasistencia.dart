@@ -378,8 +378,8 @@ class _InterfazAsitenciaState extends State<InterfazAsitencia> {
                           filtrofecha2.day,
                           filtrohora2.hour,
                           filtrohora2.minute);
-                      List<Asignacion> temporal = await FDB
-                          .selectAsignacionFecha(fecha1, fecha2);
+                      List<Asignacion> temporal =
+                          await FDB.selectAsignacionFecha(fecha1, fecha2);
                       setState(() {
                         listaAsignaciones = temporal;
                       });
@@ -556,8 +556,9 @@ class _InterfazAsitenciaState extends State<InterfazAsitencia> {
                           filtrofecha2.day,
                           filtrohora2.hour,
                           filtrohora2.minute);
-                      List<Asignacion> temporal = await FDB
-                          .selectAsignacionFechaEdif(edificioselect, fecha1, fecha2);
+                      List<Asignacion> temporal =
+                          await FDB.selectAsignacionFechaEdif(
+                              edificioselect, fecha1, fecha2);
                       setState(() {
                         listaAsignaciones = temporal;
                       });
